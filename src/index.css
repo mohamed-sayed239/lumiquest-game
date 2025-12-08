@@ -1,0 +1,60 @@
+/* تأثيرات مخصصة */
+.glow-effect {
+  filter: drop-shadow(0 0 15px rgba(79, 70, 229, 0.5));
+}
+
+.dark .glow-effect {
+  filter: drop-shadow(0 0 20px rgba(79, 70, 229, 0.8));
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+
+.star-small {
+  width: 2px;
+  height: 2px;
+}
+
+.star-medium {
+  width: 3px;
+  height: 3px;
+}
+
+.star-large {
+  width: 4px;
+  height: 4px;
+}
+
+/* تدرجات لونية */
+.gradient-day {
+  background: linear-gradient(135deg, #F7FAFC 0%, #E6FFFA 100%);
+}
+
+.gradient-night {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+.gradient-card-light {
+  background: linear-gradient(145deg, #ffffff, #f0f4f8);
+}
+
+.gradient-card-dark {
+  background: linear-gradient(145deg, #1E293B, #0F172A);
+}
+
+/* تأثيرات الضوء */
+.light-beam {
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.2) 0%, rgba(79, 70, 229, 0) 70%);
+  filter: blur(20px);
+}
+
+/* تأثيرات الانتقال السلس */
+.transition-smooth {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
