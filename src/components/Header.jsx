@@ -23,7 +23,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
             </div>
             <div className={`hidden sm:inline-block text-xs md:text-sm px-2 md:px-3 py-1 md:py-1.5 rounded-full font-medium ${isDarkMode ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white' : 'bg-gradient-to-r from-cyan-100 to-blue-100 text-indigo-700'}`}>
               <i className="fas fa-gamepad ml-1"></i>
-              <span className="hidden md:inline"> مغامرة تفاعلية</span>
+              <span className="hidden md:inline">  لعبه تفاعلية</span>
             </div>
           </Link>
 
@@ -50,7 +50,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
                 className="flex items-center text-sm md:text-base"
                 icon="fa-play"
               >
-                <span className="hidden sm:inline">ابدأ المغامرة</span>
+                <span className="hidden sm:inline">ابدأ الان</span>
                 <span className="sm:hidden">ابدأ</span>
               </Button>
             </Link>
