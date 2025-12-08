@@ -125,7 +125,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
                     className="w-full flex items-center justify-center text-base py-3"
                     icon="fa-play"
                   >
-                    ابدأ المغامرة الآن
+                    ابدأ الآن
                   </Button>
                 </Link>
               </div>
