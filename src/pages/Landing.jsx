@@ -91,28 +91,27 @@ const Landing = ({ isDarkMode }) => {
       }
     }
   };
-
 const features = [
   { 
-    icon: 'fa-solid fa-puzzle-piece', 
+    icon: <i className="fas fa-puzzle-piece"></i>, 
     text: 'ألغاز شيقة', 
     color: 'text-purple-400',
     bgColor: isDarkMode ? 'bg-purple-900/20' : 'bg-purple-100/80'
   },
   { 
-    icon: 'fa-solid fa-trophy', 
+    icon: <i className="fas fa-layer-group"></i>, 
     text: 'مستويات متدرجة', 
     color: 'text-yellow-400',
     bgColor: isDarkMode ? 'bg-yellow-900/20' : 'bg-yellow-100/80'
   },
   { 
-    icon: 'fa-solid fa-lightbulb', 
+    icon: <i className="fas fa-brain"></i>, 
     text: 'تحديات ذكية', 
     color: 'text-cyan-400',
     bgColor: isDarkMode ? 'bg-cyan-900/20' : 'bg-cyan-100/80'
   },
   { 
-    icon: 'fa-solid fa-globe', 
+    icon: <i className="fas fa-globe"></i>, 
     text: 'تجربة عالمية', 
     color: 'text-emerald-400',
     bgColor: isDarkMode ? 'bg-emerald-900/20' : 'bg-emerald-100/80'
