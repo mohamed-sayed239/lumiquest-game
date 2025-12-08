@@ -265,77 +265,62 @@ const Category = ({ isDarkMode }) => {
                 </div>
                 
                 {/* المحتوى */}
-                <div className="flex-1 text-center lg:text-right">
-                  <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
-                    <span className="text-cyan-400">🎮</span>
-                    <h3 className={`text-xl sm:text-2xl font-bold ${
-                      isDarkMode ? 'text-white' : 'text-gray-800'
-                    }`}>
-                      نصيحة اللاعبين
-                    </h3>
-                    <span className="text-cyan-400">🎯</span>
-                  </div>
-                  
-                  <div className={`space-y-3 ${
-                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
-                  }`}>
-                    <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-transparent via-white/5 to-transparent">
-                      <span className="text-cyan-400 text-lg">🎯</span>
-                      <div className="text-right">
-                        <span className={`font-bold ${
-                          isDarkMode ? 'text-cyan-300' : 'text-blue-600'
-                        }`}>المبتدئين:</span>
-                        <span className="mr-2">ابدأ هنا لتعلم الأساسيات واستمتع</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-transparent via-white/5 to-transparent">
-                      <span className="text-indigo-400 text-lg">⚡</span>
-                      <div className="text-right">
-                        <span className={`font-bold ${
-                          isDarkMode ? 'text-indigo-300' : 'text-indigo-600'
-                        }`}>المتوسطين:</span>
-                        <span className="mr-2">تحدٍ متوازن لتنمية مهاراتك</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-transparent via-white/5 to-transparent">
-                      <span className="text-purple-400 text-lg">👑</span>
-                      <div className="text-right">
-                        <span className={`font-bold ${
-                          isDarkMode ? 'text-purple-300' : 'text-purple-600'
-                        }`}>المحترفين:</span>
-                        <span className="mr-2">تحدٍ حقيقي للمهارات المتقدمة</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* بطاقة اللاعب */}
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className={`inline-flex items-center gap-3 mt-6 px-4 py-3 rounded-xl ${
-                      isDarkMode 
-                        ? 'bg-gradient-to-r from-gray-800/60 to-gray-900/60' 
-                        : 'bg-gradient-to-r from-blue-100/80 to-cyan-100/80'
-                    } border ${
-                      isDarkMode ? 'border-gray-700/50' : 'border-blue-200/50'
-                    } shadow-lg cursor-pointer`}
-                  >
-                    <span className="text-xl">🏆</span>
-                    <div className="text-right">
-                      <p className={`text-sm font-bold ${
-                        isDarkMode ? 'text-gray-300' : 'text-gray-700'
-                      }`}>
-                        يمكنك تغيير المستوى لاحقًا
-                      </p>
-                      <p className={`text-xs ${
-                        isDarkMode ? 'text-gray-400' : 'text-gray-500'
-                      }`}>
-                        ابدأ بأي مستوى وتقدم كما تريد
-                      </p>
-                    </div>
-                  </motion.div>
-                </div>
+               <div className="flex-1 text-center lg:text-right">
+  <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
+    <i className="fas fa-gamepad text-cyan-400"></i>
+    <h3 className={`text-xl sm:text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+      نصيحة اللاعبين
+    </h3>
+    <i className="fas fa-bullseye text-cyan-400"></i>
+  </div>
+
+  <div className={`space-y-3 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+    <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-transparent via-white/5 to-transparent">
+      <i className="fas fa-child text-cyan-400 text-lg"></i>
+      <div className="text-right">
+        <span className={`font-bold ${isDarkMode ? 'text-cyan-300' : 'text-blue-600'}`}>الأطفال:</span>
+        <span className="mr-2">مغامرات سهلة وممتعة</span>
+      </div>
+    </div>
+
+    <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-transparent via-white/5 to-transparent">
+      <i className="fas fa-user-graduate text-indigo-400 text-lg"></i>
+      <div className="text-right">
+        <span className={`font-bold ${isDarkMode ? 'text-indigo-300' : 'text-indigo-600'}`}>الشباب:</span>
+        <span className="mr-2">تحديات متوسطة وذكية</span>
+      </div>
+    </div>
+
+    <div className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-transparent via-white/5 to-transparent">
+      <i className="fas fa-crown text-purple-400 text-lg"></i>
+      <div className="text-right">
+        <span className={`font-bold ${isDarkMode ? 'text-purple-300' : 'text-purple-600'}`}>المحترفين:</span>
+        <span className="mr-2">مستويات صعبة ومليئة بالإثارة</span>
+      </div>
+    </div>
+  </div>
+
+  {/* بطاقة اللاعب */}
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className={`inline-flex items-center gap-3 mt-6 px-4 py-3 rounded-xl ${
+      isDarkMode 
+        ? 'bg-gradient-to-r from-gray-800/60 to-gray-900/60' 
+        : 'bg-gradient-to-r from-blue-100/80 to-cyan-100/80'
+    } border ${isDarkMode ? 'border-gray-700/50' : 'border-blue-200/50'} shadow-lg cursor-pointer`}
+  >
+    <i className="fas fa-trophy text-xl"></i>
+    <div className="text-right">
+      <p className={`text-sm font-bold ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+        يمكنك تغيير المستوى لاحقًا
+      </p>
+      <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+        ابدأ بأي مستوى وتقدم كما تريد
+      </p>
+    </div>
+  </motion.div>
+</div>
+
               </div>
             </div>
           </div>

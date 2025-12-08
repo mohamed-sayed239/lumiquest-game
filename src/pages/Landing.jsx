@@ -92,32 +92,33 @@ const Landing = ({ isDarkMode }) => {
     }
   };
 
-  const features = [
-    { 
-      icon: '🧩', 
-      text: 'ألغاز شيقة', 
-      color: 'text-purple-400',
-      bgColor: isDarkMode ? 'bg-purple-900/20' : 'bg-purple-100/80'
-    },
-    { 
-      icon: '🏆', 
-      text: 'مستويات متدرجة', 
-      color: 'text-yellow-400',
-      bgColor: isDarkMode ? 'bg-yellow-900/20' : 'bg-yellow-100/80'
-    },
-    { 
-      icon: '💡', 
-      text: 'تحديات ذكية', 
-      color: 'text-cyan-400',
-      bgColor: isDarkMode ? 'bg-cyan-900/20' : 'bg-cyan-100/80'
-    },
-    { 
-      icon: '🌍', 
-      text: 'تجربة عالمية', 
-      color: 'text-emerald-400',
-      bgColor: isDarkMode ? 'bg-emerald-900/20' : 'bg-emerald-100/80'
-    }
-  ];
+const features = [
+  { 
+    icon: 'fa-solid fa-puzzle-piece', 
+    text: 'ألغاز شيقة', 
+    color: 'text-purple-400',
+    bgColor: isDarkMode ? 'bg-purple-900/20' : 'bg-purple-100/80'
+  },
+  { 
+    icon: 'fa-solid fa-trophy', 
+    text: 'مستويات متدرجة', 
+    color: 'text-yellow-400',
+    bgColor: isDarkMode ? 'bg-yellow-900/20' : 'bg-yellow-100/80'
+  },
+  { 
+    icon: 'fa-solid fa-lightbulb', 
+    text: 'تحديات ذكية', 
+    color: 'text-cyan-400',
+    bgColor: isDarkMode ? 'bg-cyan-900/20' : 'bg-cyan-100/80'
+  },
+  { 
+    icon: 'fa-solid fa-globe', 
+    text: 'تجربة عالمية', 
+    color: 'text-emerald-400',
+    bgColor: isDarkMode ? 'bg-emerald-900/20' : 'bg-emerald-100/80'
+  }
+];
+
 
   // تأثير parallax للخلفية
   const backgroundStyle = {
@@ -210,7 +211,7 @@ const Landing = ({ isDarkMode }) => {
           >
             {/* شعار اللعبة */}
             <div className="inline-block mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm border border-cyan-400/30">
-              <span className="text-sm font-bold text-cyan-400 tracking-wider">✨ تجربة ألعاب فريدة ✨</span>
+              <span className="text-sm font-bold text-cyan-400 tracking-wider"> تجربة ألعاب فريدة</span>
             </div>
             
             <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 sm:mb-6 tracking-tight">
@@ -302,7 +303,7 @@ const Landing = ({ isDarkMode }) => {
                     >
                       🎮
                     </motion.span>
-                    <span className="tracking-wider">ابدأ المغامرة</span>
+                    <span className="tracking-wider">ابدأ الان</span>
                     <motion.span
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
@@ -323,7 +324,7 @@ const Landing = ({ isDarkMode }) => {
             >
               <span className="inline-flex items-center gap-2">
                 <span className="text-xl">💫</span>
-                اختر مستوى التحدي وانطلق في مغامرتك
+                اختر مستوى التحدي وانطلق في اللعب
                 <span className="text-xl">🚀</span>
               </span>
             </motion.p>
