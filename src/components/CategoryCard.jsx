@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
+import { useGame } from '../contexts/GameContext';
 
 const CategoryCard = ({ 
   title, 
@@ -8,8 +10,17 @@ const CategoryCard = ({
   accentColorLight,
   icon, 
   index,
-  isDarkMode = false 
+  isDarkMode = false,
+  isActive = false
 }) => {
+  const navigate = useNavigate();
+  const { startGame } = useGame();
+
+  const handleSelectCategory = () => {
+    startGame(title);
+    navigate('/game');
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -21,12 +32,17 @@ const CategoryCard = ({
         transition: { type: "spring", stiffness: 300 }
       }}
       whileTap={{ scale: 0.98 }}
-      className={`relative rounded-3xl overflow-hidden ${isDarkMode ? 'gradient-card-dark' : 'gradient-card-light'} shadow-xl hover:shadow-2xl transition-all duration-500`}
+      className={`relative rounded-3xl overflow-hidden ${
+        isDarkMode ? 'gradient-card-dark' : 'gradient-card-light'
+      } shadow-xl hover:shadow-2xl transition-all duration-500 ${
+        isActive ? 'ring-2 ring-offset-4' : ''
+      }`}
       style={{
         borderTop: `6px solid ${accentColor}`,
         boxShadow: isDarkMode 
           ? `0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px ${accentColor}40`
-          : `0 20px 40px rgba(0, 0, 0, 0.1), 0 0 15px ${accentColor}30`
+          : `0 20px 40px rgba(0, 0, 0, 0.1), 0 0 15px ${accentColor}30`,
+        borderColor: isActive ? accentColor : 'transparent'
       }}
     >
       {/* تأثير التوهج */}
@@ -82,9 +98,10 @@ const CategoryCard = ({
               background: `linear-gradient(45deg, ${accentColor}, ${accentColorLight})`,
               boxShadow: `0 10px 20px ${accentColor}40`
             }}
+            onClick={handleSelectCategory}
           >
             <i className="fas fa-arrow-left ml-2"></i>
-            اختر الفئة
+            اختر الفئة وابدأ اللعب
           </Button>
         </div>
       </div>
